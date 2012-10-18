@@ -1,0 +1,47 @@
+!SESSION 2012-10-16 10:39:22.866 -----------------------------------------------
+eclipse.buildId=3.2.2.201208201020
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.syncing.core 4 0 2012-10-16 10:44:59.986
+!MESSAGE (Build 3.2.2.201208201020) [ERROR]  Opening file failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Opening file failed
+	at com.aptana.filesystem.secureftp.internal.SFTPConnectionFileManager.writeFile(SFTPConnectionFileManager.java:1156)
+	at com.aptana.core.io.vfs.BaseConnectionFileManager.openOutputStream(BaseConnectionFileManager.java:333)
+	at com.aptana.core.io.efs.VirtualFile.openOutputStream(VirtualFile.java:143)
+	at com.aptana.core.io.efs.SyncUtils.copy(SyncUtils.java:93)
+	at com.aptana.ide.syncing.core.old.Synchronizer.uploadAndDelete(Synchronizer.java:1395)
+	at com.aptana.ide.syncing.core.old.Synchronizer.upload(Synchronizer.java:1299)
+	at com.aptana.ide.syncing.ui.actions.UploadAction$1.run(UploadAction.java:128)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.enterprisedt.net.ftp.FTPException: 3 Permission denied
+	at com.enterprisedt.net.j2ssh.sftp.SftpSubsystemClient.a(SftpSubsystemClient.java:1103)
+	at com.enterprisedt.net.j2ssh.sftp.SftpSubsystemClient.openFile(SftpSubsystemClient.java:607)
+	at com.enterprisedt.net.j2ssh.SftpClient.getOutputStream(SftpClient.java:1047)
+	at com.enterprisedt.net.ftp.ssh.SSHFTPOutputStream.<init>(SSHFTPOutputStream.java:141)
+	at com.enterprisedt.net.ftp.ssh.SSHFTPOutputStream.<init>(SSHFTPOutputStream.java:120)
+	at com.aptana.filesystem.secureftp.internal.SFTPConnectionFileManager.writeFile(SFTPConnectionFileManager.java:1137)
+	... 7 more
+!SUBENTRY 1 com.aptana.filesystem.secureftp 4 0 2012-10-16 10:44:59.988
+!MESSAGE Opening file failed
+!STACK 0
+com.enterprisedt.net.ftp.FTPException: 3 Permission denied
+	at com.enterprisedt.net.j2ssh.sftp.SftpSubsystemClient.a(SftpSubsystemClient.java:1103)
+	at com.enterprisedt.net.j2ssh.sftp.SftpSubsystemClient.openFile(SftpSubsystemClient.java:607)
+	at com.enterprisedt.net.j2ssh.SftpClient.getOutputStream(SftpClient.java:1047)
+	at com.enterprisedt.net.ftp.ssh.SSHFTPOutputStream.<init>(SSHFTPOutputStream.java:141)
+	at com.enterprisedt.net.ftp.ssh.SSHFTPOutputStream.<init>(SSHFTPOutputStream.java:120)
+	at com.aptana.filesystem.secureftp.internal.SFTPConnectionFileManager.writeFile(SFTPConnectionFileManager.java:1137)
+	at com.aptana.core.io.vfs.BaseConnectionFileManager.openOutputStream(BaseConnectionFileManager.java:333)
+	at com.aptana.core.io.efs.VirtualFile.openOutputStream(VirtualFile.java:143)
+	at com.aptana.core.io.efs.SyncUtils.copy(SyncUtils.java:93)
+	at com.aptana.ide.syncing.core.old.Synchronizer.uploadAndDelete(Synchronizer.java:1395)
+	at com.aptana.ide.syncing.core.old.Synchronizer.upload(Synchronizer.java:1299)
+	at com.aptana.ide.syncing.ui.actions.UploadAction$1.run(UploadAction.java:128)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.osgi 2 1 2012-10-16 11:34:25.670
+!MESSAGE NLS missing message: HttpServerSettingsTab_Title in: com.aptana.js.debug.ui.internal.launchConfigurations.messages
